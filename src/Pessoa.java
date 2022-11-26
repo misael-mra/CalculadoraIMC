@@ -58,11 +58,11 @@ public class Pessoa {
 		System.out.printf("Seu IMC: %.2f %n", this.getImc());
 
 		if (this.getImc() < 18.5) {
-			System.out.println("Abaixo do peso ideal. \n");
+			System.out.println("Cuidado, você está abaixo do seu peso ideal. \n");
 		} else if (this.getImc() >= 18.5 && this.getImc() < 24.9) {
-			System.out.println("Parabéns, você está no peso ideal. \n");
+			System.out.println("Parabéns, você está na sua faixa de peso ideal. \n");
 		} else {
-			System.out.println("Cuidado, você está sobrepeso! \n");
+			System.out.println("Atenção, você está sobrepeso! \n");
 		}
 
 		System.out.println("Peso: " + this.getPeso() + "kg");
