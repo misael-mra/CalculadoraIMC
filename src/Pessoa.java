@@ -49,8 +49,8 @@ public class Pessoa {
 
 	// Métodos públicos
 
-	public void resultado() {
-
+	public void calculo() {
+		// IMC = Peso / Altura^2
 		this.setImc(this.getPeso() / (this.getAltura() * this.getAltura()));
 
 		System.out.println("----------------Seu Resultado-----------------");
@@ -62,11 +62,10 @@ public class Pessoa {
 		} else if (this.getImc() >= 18.5 && this.getImc() < 24.9) {
 			System.out.println("Parabéns, você está no peso ideal. \n");
 		} else {
-			System.out.println("Cuidado você está sobrepeso! \n");
+			System.out.println("Cuidado, você está sobrepeso! \n");
 		}
 
-		System.out.println("Peso: " + this.getPeso());
-		System.out.println("Altura: " + this.getAltura());
-
+		System.out.println("Peso: " + this.getPeso() + "kg");
+		System.out.println("Altura: " + this.getAltura() + "m");
 	}
 }
