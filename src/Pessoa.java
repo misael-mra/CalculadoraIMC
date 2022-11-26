@@ -5,7 +5,6 @@ public class Pessoa {
 	private double altura;
 	private double peso;
 	private double imc;
-	private double pesoIdeal;
 
 	// Método construtor
 
@@ -15,8 +14,7 @@ public class Pessoa {
 		this.setPeso(peso);
 	}
 
-	// Métodos Espéciais
-
+	// GETTERS AND SETTERS
 	public String getNome() {
 		return nome;
 	}
@@ -29,8 +27,8 @@ public class Pessoa {
 		return imc;
 	}
 
-	public void setImc(double imc) {		
-		this.imc = imc;		
+	public void setImc(double imc) {
+		this.imc = imc;
 	}
 
 	public double getAltura() {
@@ -52,28 +50,23 @@ public class Pessoa {
 	// Métodos públicos
 
 	public void resultado() {
-		imc = peso/(altura*altura);
-	
+
+		this.setImc(this.getPeso() / (this.getAltura() * this.getAltura()));
+
 		System.out.println("----------------Seu Resultado-----------------");
 		System.out.println("Nome: " + this.getNome());
 		System.out.printf("Seu IMC: %.2f %n", this.getImc());
-		
-		if (imc < 18.5) {			
+
+		if (this.getImc() < 18.5) {
 			System.out.println("Abaixo do peso ideal. \n");
-		} else if (imc >= 18.5 && imc < 24.9) {
+		} else if (this.getImc() >= 18.5 && this.getImc() < 24.9) {
 			System.out.println("Parabéns, você está no peso ideal. \n");
 		} else {
-			System.out.println("Cuidado você está sobrepeso! \n");			
+			System.out.println("Cuidado você está sobrepeso! \n");
 		}
-		
+
 		System.out.println("Peso: " + this.getPeso());
 		System.out.println("Altura: " + this.getAltura());
 
 	}
-	
-	public void pesoIdeal() {
-		pesoIdeal = imc*(altura*altura);
-		//System.out.println("Seu peso ideal é: " + pesoIdeal);
-	}
-
 }
